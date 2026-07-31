@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Tamarillo Timer</title>
+    <meta name="description" content="Tamarillo Timer — a minimal menu bar break reminder for macOS. Focus, rest, repeat.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://tamarillo.nz/">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tamarillo.css">
+    <script src="theme.js" defer></script>
+    <script src="lightbox.js" defer></script>
+
+    <script data-goatcounter="https://fixf.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </head>
+  <body>
+
+    <div class="theme-toggle" role="radiogroup" aria-label="Theme">
+      <button type="button" data-theme-choice="light" role="radio" aria-checked="false" aria-label="Light" title="Light">
+        <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="12" y1="2" x2="12" y2="4.5"/>
+            <line x1="12" y1="19.5" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="4.5" y2="12"/>
+            <line x1="19.5" y1="12" x2="22" y2="12"/>
+            <line x1="4.93" y1="4.93" x2="6.64" y2="6.64"/>
+            <line x1="17.36" y1="17.36" x2="19.07" y2="19.07"/>
+            <line x1="4.93" y1="19.07" x2="6.64" y2="17.36"/>
+            <line x1="17.36" y1="6.64" x2="19.07" y2="4.93"/>
+          </g>
+        </svg>
+      </button>
+      <button type="button" data-theme-choice="auto" role="radio" aria-checked="true" aria-label="Match system" title="Match system">
+        <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <button type="button" data-theme-choice="dark" role="radio" aria-checked="false" aria-label="Dark" title="Dark">
+        <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <section class="screenshots" aria-label="Screenshots">
+      <h1 class="sr-only">Tamarillo Timer</h1>
+      <div class="screenshots-track">
+        <figure>
+          <button type="button" class="screenshot-trigger">
+            <img src="screenshots/main.1440.png" alt="Tamarillo Timer's countdown sitting quietly in the macOS menu bar" width="1440" height="900" loading="eager">
+          </button>
+          <figcaption>Lives unobtrusively in the menu bar</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="screenshot-trigger">
+            <img src="screenshots/popup.1440.png" alt="A “Take a moment” popup nudging you to look around, breathe, and stretch" width="1440" height="900" loading="lazy">
+          </button>
+          <figcaption>A nudge to take a break</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="screenshot-trigger">
+            <img src="screenshots/menu.1440.png" alt="The menu bar dropdown with Restart timer, Mute, Disable popups, and Settings" width="1440" height="900" loading="lazy">
+          </button>
+          <figcaption>Control one click away</figcaption>
+        </figure>
+        <figure>
+          <button type="button" class="screenshot-trigger">
+            <img src="screenshots/settings.1440.png" alt="The Settings panel: interval in minutes, restart after sleep, open at login, reminder sound" width="1440" height="900" loading="lazy">
+          </button>
+          <figcaption>Just the essentials</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="content download-cta">
+      <a class="download-card" href="TamarilloTimer.dmg" aria-label="Download Tamarillo Timer for Mac"
+         data-goatcounter-click="tamarillo-download-dmg" data-goatcounter-title="Download TamarilloTimer.dmg">
+        <img class="app-icon" src="TamarilloTimer.png" alt="" width="512" height="512" loading="eager">
+        <span class="download-text">
+          <span class="app-name">Tamarillo Timer</span>
+          <span class="download-label">Download for Mac · Free · No Ads</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="content prose">
+      <h2>About</h2>
+      <p>Focus, rest, repeat: Tamarillo Timer helps maintain your focus by reminding you to take regular awareness breaks.</p>
+      <p>Tamarillo takes a minimalist approach: just the essentials. It displays an unobtrusive timer in the menu bar and limits configuration to the essential settings.</p>
+      <p>A popup or sound nudges you to take a break. But you can keep it even simpler — disable them, and the menu bar clearly indicates when it's time to stop for a moment.</p>
+      <p>Tamarillo's resource usage is minimal too. The install is under 2&nbsp;MB and CPU usage is almost 0%.</p>
+
+    <h2>Privacy</h2>
+    <p>Tamarillo Timer respects your privacy. All of your settings stay on your device — they're saved locally and never sent anywhere. There's no account and no login. The app doesn't track you or "phone home": it makes no network connections of its own, bundles no analytics or advertising code, and shows no ads.</p>
+      <p>Finding Tamarillo useful? <a href="https://buymeacoffee.com/fixf">Support development</a>.
+    </div>
+
+    <nav class="sidebar" aria-label="Site links">
+      <a class="sidebar-link" href="/">Home</a>
+      <a class="sidebar-link" href="https://nback.xyz">Goldfish n-back</a>
+      <a class="sidebar-link" href="/support.html">Support</a>
+      <a class="sidebar-link" href="/privacy.html">Privacy</a>
+    </nav>
+
+    <footer>
+      <p>
+        <a href="https://fixf.dev/">fix&#x1D453;</a> &copy; <span id="copyright-year">2026</span>
+      </p>
+    </footer>
+
+  </body>
+</html>

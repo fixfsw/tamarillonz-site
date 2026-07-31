@@ -1,0 +1,160 @@
+/* ============================================================
+   tamarillo.nz-only styles — loaded after the shared common style.css.
+   Everything else (ground, type, .content column, .sidebar, footer,
+   .prose) comes from ../common/assets/style.css.
+   ============================================================ */
+
+/* ── Screenshot spread — the App-Store-style first section ─────
+   Deliberately wider than the shared 680px .content column so the
+   spread reads as a hero. A horizontal scroller on every viewport
+   width keeps four screenshots usable without shrinking any of
+   them to illegibility. */
+.screenshots {
+  max-width: 1100px;
+  margin: var(--space-sm) auto var(--space-lg);
+  padding: 0 4%;
+}
+
+.screenshots-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 0.25rem 0.25rem 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshots-track figure {
+  flex: 0 0 auto;
+  width: min(80vw, 420px);
+  scroll-snap-align: center;
+}
+
+.screenshots-track img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-main);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+
+.screenshots-track figcaption {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--fg-brown-lt);
+}
+
+/* ── Screenshot lightbox — click a thumbnail to view it enlarged,
+   sized by lightbox.js to about the width of .screenshots-track. */
+.screenshot-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.screenshot-trigger:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+  border-radius: 0.9rem;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+
+.lightbox-image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-main);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  cursor: zoom-out;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* ── Download card — squircle icon as the download CTA ─────────
+   22% corner radius is the common web approximation of the macOS
+   squircle; combined with overflow:hidden it reads as an app icon
+   without needing a hand-authored superellipse mask. */
+.download-cta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.9rem 1.6rem 0.9rem 0.9rem;
+  border-radius: 1.4rem;
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-main);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.download-card:hover,
+.download-card:focus-visible {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.4);
+}
+
+.app-icon {
+  flex: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 22%;
+  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.45);
+}
+
+.download-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.app-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--fg-brown-dk);
+}
+
+.download-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent-blue);
+}
+
+/* ── Responsive: Mobile ─────────────────────────────────────── */
+@media (max-width: 640px) {
+  .download-card {
+    padding: 0.8rem 1.1rem 0.8rem 0.8rem;
+    gap: 0.85rem;
+  }
+
+  .app-icon {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
